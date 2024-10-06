@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempratur  convertor</title>
+</head>
+<body>
+<label for="inptFaren">Enter the Faren Heat to be converted to celcious</label>
+<input id="inptFaren" type="number" oninput="farenToCelcious(this.value)" onchange="this.value" placeholder="enter the value">
+<p id="farenToCelciousRes"></p>
+
+<label for="inpcel">Enter the Celcious Heat to be converted to Faren heat </label>
+<input id="inptcel" type="number" oninput="celciousToFaren(this.value)" onchange="this.value" placeholder="enter the value">
+<p id="celToFarenRes"></p>
+
+<script>
+    function farenToCelcious(passValue){
+        var htvalue = passValue
+        document.getElementById('farenToCelciousRes').innerHTML = (htvalue-32)/1.8
+    }
+    function celciousToFaren(passEle){
+        var htvalue = passEle
+        document.getElementById('celToFarenRes').innerHTML = (htvalue*1.8)+32
+    }
+</script>
+</body>
+</html>
